@@ -2,10 +2,9 @@ pipeline {
     agent any
     tools { 
         maven 'MVN' 
-
     }
-        
-          stage ('compile') {
+      stages {
+         stage ('compile') {
             steps {
                 sh "mvn compile" 
             }
@@ -26,3 +25,4 @@ pipeline {
             }
          }
    }
+}
